@@ -1,2 +1,2 @@
-# Employee-Managment-Thymeleaf
-A working Spring boot project using Thymeleaf template.
+# Employee-Managment
+A working Spring boot project using Data rest
