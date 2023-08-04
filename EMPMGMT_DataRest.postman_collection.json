@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "050c8286-43f6-42dc-8575-41369fc538d3",
+		"name": "EMPMGMT_DataRest",
+		"description": "If dont want to use Dao then add JPA Repository interface and replace dao. If dont want to use Service and Controller then replace them with Spring Data Rest.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14298786"
+	},
+	"item": [
+		{
+			"name": "List Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/magic-api/members"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"empName\":\"Sukant Sherawat\",\r\n    \"age\": 26,\r\n    \"email\": \"sukku@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/magic-api/members"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"empName\": \"Kavya Bansore\",\r\n    \"age\": 25,\r\n    \"email\": \"kavya.bansore25@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/magic-api/members/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/magic-api/members/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Descending order_object",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/magic-api/members?sort=age,desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"magic-api",
+						"members"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "age,desc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
